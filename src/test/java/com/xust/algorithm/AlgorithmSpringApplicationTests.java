@@ -1,4 +1,4 @@
-package com.xust.algorithmspring;
+package com.xust.algorithm;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

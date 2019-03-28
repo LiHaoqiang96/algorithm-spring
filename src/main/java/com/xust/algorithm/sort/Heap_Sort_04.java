@@ -1,7 +1,8 @@
 package com.xust.algorithm.sort;
+
 /**
  * 堆排序(选择排序)
- * */
+ */
 public class Heap_Sort_04 {
 
     public static void HeapSort(int[] array) {
@@ -10,7 +11,7 @@ public class Heap_Sort_04 {
         int lastIndex = array.length - 1;
         int startIndex = (lastIndex - 1) / 2;
         for (int i = startIndex; i >= 0; i--) {
-            maxHeap( array, array.length, i );
+            maxHeap(array, array.length, i);
         }
         // 2. 排序：末尾与头交换，逐一找出最大值，最终形成一个递增的有序序列
         for (int i = array.length - 1; i > 0; i--) {
@@ -29,14 +30,14 @@ public class Heap_Sort_04 {
         // 最大元素下标
         int largestIndex = index;
         // 分别比较当前节点和左右子节点，找出最大值
-        if ( leftChild < heapSize && data[leftChild] > data[largestIndex] ) {
+        if (leftChild < heapSize && data[leftChild] > data[largestIndex]) {
             largestIndex = leftChild;
         }
-        if ( rightChild < heapSize && data[rightChild] > data[largestIndex] ) {
+        if (rightChild < heapSize && data[rightChild] > data[largestIndex]) {
             largestIndex = rightChild;
         }
         // 如果最大值是子节点，则进行交换
-        if ( largestIndex != index ) {
+        if (largestIndex != index) {
             int temp = data[index];
             data[index] = data[largestIndex];
             data[largestIndex] = temp;
@@ -47,10 +48,10 @@ public class Heap_Sort_04 {
 
     public static void main(String[] args) {
 
-        int[] array = {1,8,6,2,5,4,7,3};
+        int[] array = {1, 8, 6, 2, 5, 4, 7, 3};
         HeapSort(array);
-        for(int i:array){
-            System.out.print(i+"  ");
+        for (int i : array) {
+            System.out.print(i + "  ");
         }
 
     }

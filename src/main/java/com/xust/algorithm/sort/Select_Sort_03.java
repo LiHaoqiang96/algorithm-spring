@@ -1,7 +1,8 @@
 package com.xust.algorithm.sort;
+
 /**
  * 直接选择(选择排序)
- * */
+ */
 public class Select_Sort_03 {
 
     public static void SelectSort(int[] array) {
@@ -22,10 +23,10 @@ public class Select_Sort_03 {
     }
 
     public static void main(String[] args) {
-        int[] a = {3,2,5,8,4,7,6,9};
+        int[] a = {3, 2, 5, 8, 4, 7, 6, 9};
         SelectSort(a);
-        for(int i:a){
-            System.out.print(i+"  ");
+        for (int i : a) {
+            System.out.print(i + "  ");
         }
     }
 

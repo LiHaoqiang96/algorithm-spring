@@ -4,19 +4,19 @@ import com.xust.algorithm.compar.comparable.Domain;
 
 import java.util.Comparator;
 
-public class DomainComparator implements Comparator<Domain>
-{
-    public int compare(Domain domain1, Domain domain2)
-    {
-        if (domain1.getStr().compareTo(domain2.getStr()) > 0)
+public class DomainComparator implements Comparator<Domain> {
+    @Override
+    public int compare(Domain domain1, Domain domain2) {
+        if (domain1.getStr().compareTo(domain2.getStr()) > 0) {
             return 1;
-        else if (domain1.getStr().compareTo(domain2.getStr()) == 0)
+        } else if (domain1.getStr().compareTo(domain2.getStr()) == 0) {
             return 0;
-        else
+        } else {
             return -1;
+        }
     }
-    public static void main(String[] args)
-    {
+
+    public static void main(String[] args) {
         Domain d1 = new Domain("c");
         Domain d2 = new Domain("c");
         Domain d3 = new Domain("b");

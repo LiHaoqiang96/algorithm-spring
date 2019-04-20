@@ -1,27 +1,25 @@
 package com.xust.algorithm.compar.comparable;
 
-public class Domain implements Comparable<Domain>
-{
+public class Domain implements Comparable<Domain> {
     private String str;
 
-    public Domain(String str)
-    {
+    public Domain(String str) {
         this.str = str;
     }
 
-    public String getStr()
-    {
+    public String getStr() {
         return str;
     }
 
-    public int compareTo(Domain domain)
-    {
-        if (this.str.compareTo(domain.str) > 0)
+    @Override
+    public int compareTo(Domain domain) {
+        if (this.str.compareTo(domain.str) > 0) {
             return 1;
-        else if (this.str.compareTo(domain.str) == 0)
+        } else if (this.str.compareTo(domain.str) == 0) {
             return 0;
-        else
+        } else {
             return -1;
+        }
     }
 
     public static void main(String[] args) {

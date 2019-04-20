@@ -38,8 +38,9 @@ public class Radix_Sort_08 {
 
         int max = array[0];
         for (int i = 0; i < array.length; i++) {
-            if (array[i] > max)
+            if (array[i] > max) {
                 max = array[i];
+            }
         }
 
         int digit = 0;
@@ -89,10 +90,7 @@ public class Radix_Sort_08 {
     }
 
     public static void main(String[] args) {
-
         int[] array = {-3, -2, 5, -8, -0, 0, 6, 9};
         Group(array);
-
     }
-
 }
